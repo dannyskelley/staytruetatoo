@@ -1,6 +1,276 @@
+<style>
+    /*-- -------------------------- -->
+<---           Footer           -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+    #footer {
+        background:#000;
+        padding: calc(84 / 16 * 1rem) 0 calc(20 / 16 * 1rem);
+        font-size: min(4vw, 1.2em);
+
+        .left-section {
+            margin: auto;
+            margin-bottom: calc(50 / 16 * 1rem);
+            text-align: center;
+            .logo {
+                display: block;
+                margin: auto;
+                margin-bottom: calc(30 / 16 * 1em);
+                height: auto;
+                max-width: 100%;
+                text-align: center;
+                
+
+                img {
+                    display: block;
+                   height: auto;
+                    width: 100%;
+                    border-radius: 99px;
+                }
+            }
+
+            p {
+                opacity: 0.9;
+                margin: auto;
+                width: 100%;
+                font-size: calc(14 / 16 * 1rem);
+                line-height: calc(27 / 14 * 1rem);
+                color: #fff;
+                text-align: center;
+            }
+        }
+
+        .right-section {
+            margin: auto;
+            max-width: calc(407 / 16 * 1rem);
+            width: 96%;
+            .lists {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: auto;
+                max-width: calc(307 / 16 * 1rem);
+                width: 96%;
+                ul {
+                    margin-top: 0;
+                    
+                    padding: 0;
+
+                    li {
+                        opacity: 0.9;
+                        margin-bottom: calc(12 / 16 * 1rem);
+                        list-style: none;
+                        font-size: calc(18 / 16 * 1rem);
+                        color: #fff;
+
+                        a {
+                            text-decoration: none;
+                            line-height: calc(21 / 18 * 1em);
+                            color: #fff;
+                            transition: color 0.3s;
+                            &:hover {
+                                color: var(--primary);
+                            }
+                        }
+                    }
+                    h2 {
+                        position: relative;
+                        margin-bottom: calc(37 / 16 * 1rem);
+                        text-transform: uppercase;
+                        font-size: calc(18 / 16 * 1rem);
+                        line-height: calc(21 / 18 * 1em);
+                        font-weight: bold;
+                        color: #fff;
+
+                        &:before {
+                            position: absolute;
+                            bottom: calc(-16 / 16 * 1rem);
+                            left: 0;
+                            content: "";
+                            opacity: 1;
+                            display: block;
+                            background: var(--primary);
+                            height: calc(2 / 16 * 1rem);
+                            width: calc(97 / 16 * 1rem);
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        margin-top: calc(50 / 16 * 1rem);
+                        li {
+                            
+                            justify-content: flex-start;
+                            align-items: center;
+                            margin-bottom: calc(16 / 16 * 1rem);
+
+                            &:last-of-type {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .cs-button-solid {
+                margin: 0;
+                height: calc(53 / 16 * 1rem);
+                width: calc(250 / 16 * 1rem);
+                padding-top: calc(3 / 16 * 1rem);
+            }
+        }
+
+        .credit {
+            margin: auto;
+            max-width: 82.5rem;
+            margin-top: calc(100 / 16 * 1rem);
+            width: 96%;
+            text-align: center;
+            font-size: calc(16 / 16 * .8rem);
+            font-weight: 100;
+            line-height: calc(36 / 16 * 1rem);
+            color: #fff;
+            
+
+            a {
+                text-decoration: none;
+                font-size: calc(16 / 16 * 1rem);
+                color: var(--primary);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .copyright {
+                display: block;
+                font-size: calc(16 / 16 * 1rem);
+            }
+        }
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64rem) {
+    #footer {
+        font-size: min(1.2vw, 1em);
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            margin: auto;
+            max-width: calc(1320 / 16 * 1rem);
+            width: 96%;
+            padding: 0px 0;
+        }
+
+        .left-section {
+            margin: 0;
+            width: calc(409 / 16 * 1rem);
+            text-align: left;
+
+            .logo {
+                margin-left: 0;
+                margin-top: -200px;
+                height: calc(40 / 16 * 2.5rem);
+                text-align: left;
+                max-width: 300px;
+            }
+
+            p {
+                margin-left: 0;
+                text-align: left;
+            }
+        }
+
+        .right-section {
+            margin: 0;
+            max-width: none;
+            width: calc(609 / 16 * 1.2rem);
+
+            .lists {
+                margin: 0;
+                max-width: calc(769 / 16 * 1rem);
+                width: 96%;
+
+                ul {
+                    li {
+                        a {
+                            position: relative;
+
+                            &:before {
+                                position: absolute;
+                                bottom: calc(-3 / 16 * 1rem);
+                                left: 0;
+                                content: "";
+                                opacity: 1;
+                                display: block;
+                                background: var(--primary);
+                                height: calc(2 / 16 * 1rem);
+                                width: 0%;
+                                transition: width 0.3s;
+                            }
+
+                            &:hover {
+                                &:before {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        margin-top: 0;
+
+                        li:first-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                justify-content: flex-start;
+            }
+        }
+
+        .credit {
+            .copyright {
+                display: inline-block;
+            }
+        }
+    }
+
+}
+
+
+.bigArrow {width:50px; height: 50px; padding: 0px; margin:-100px  auto 100px; display: block;}
+.bigArrow:hover {transform: scale(1.5);border:0px;background-color: white;}
+.bigArrow:hover:before{opacity: 0;}
+.bigArrow img {width: 20px; vertical-align: middle;filter: grayscale(1) brightness(1000%);transition: all ease .5s}
+.bigArrow:hover img {transform: scale(1.5);filter: brightness(0%);transition: all ease .2s}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #footer {
+            background: #061623;
+        }
+    }
+}
+</style>
+
 <!-- ============================================ -->
 <!--                   Footer                     -->
 <!-- ============================================ -->
+
+
 
 <STYLE>
     .gandalfpill {transition: all ease .2s;margin-left:5px;vertical-align:middle;  display: inline-block; background-color: white; padding:0 8px; border-radius: 999px;}
@@ -12,7 +282,7 @@
 <footer id="footer">
     <div class="container">
         <div class="left-section">
-            <a class="logo"  href="/"><img loading="lazy" decoding="async" src="/assets/images/homelogo.jpg" alt="logo" width="264" height="78"></a>
+            <a class="logo"  href="/"><img loading="lazy" decoding="async" src="/assets/images/footer.jpg" alt="logo" width="264" height="78"></a>
             <!--<p>
                 Detroit Website Design
             </p>-->
@@ -103,7 +373,7 @@
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/OfficialTomatoTattoo/" title="Facebook">
+                        <a target="_blank" href="https://www.facebook.com/Staytruetattoo904" title="Facebook">
                             <svg role="img" style="fill:white; width:50px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"></path></svg>
                         </a>
                     </li>
@@ -119,10 +389,10 @@
         
             <span class="copyright">
                 © {% year %} {{client.name}}</span>
-                <a class="back2top" href="#top">Back to top</a>
+                <a class="cs-button-solid back2top" href="#top">Back to top</a>
         </div>
       
-<div>
+<div style="text-align: left; margin-left:20px;">
         <span>Designed & Hand Coded by</span>
        
         <a target="_blank" class="gandalfpill" href="https://designgandalf.com/"><img style="vertical-align:middle; " loading="lazy" decoding="async" src="/assets/svgs/logo.svg" alt="logo" height="12"></a>
