@@ -9,11 +9,13 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+
+    .buttonsContainer {text-align: center; margin-bottom: 40px;}
     #hero-998 {
       background-color: white;
         min-height: 100vh;
         /* 144px - 280px */
-        padding: clamp(0rem, 25.95vw, 17.5rem) 2rem;
+        padding: clamp(0rem, 25.95vw, 17.5rem) 1.5rem;
         padding-top:100px;
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
@@ -41,6 +43,7 @@
         color: black;
         display: inline-flex;
         justify-content: center;
+        text-align: center;
         align-items: center;
         position: relative;
         gap: 1rem;
@@ -49,9 +52,9 @@
         /* left line */
         content: "";
         width: 100%;
-        max-width: 6.25rem;
+        max-width: 1.25rem;
         height: 2px;
-        background: var(--primary);
+        background: black;
         opacity: 1;
         position: relative;
         display: block;
@@ -60,9 +63,9 @@
         /* right line */
         content: "";
         width: 100%;
-        max-width: 6.25rem;
+        max-width: 1.25rem;
         height: 2px;
-        background: var(--primary);
+        background: black;
         opacity: 1;
         position: relative;
         display: block;
@@ -122,6 +125,9 @@
 }
 /* Desktop Parallax - 1400px */
 @media only screen and (min-width: 87.5rem) {
+
+    .buttonsContainer {display: flex; margin-bottom: 30px;}
+    #hero-998 {padding-top: 120px;}
     #hero-998 .cs-background {
         background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg");
         background-size: cover;
@@ -148,18 +154,26 @@
               <source media="(min-width: 601px)" srcset="/assets/images/homelogo.jpg">
               <img decoding="async" src="/assets/images/homelogo.jpg" alt="" width="614" height="166">
               </picture>
-              <span class="cs-topper">Relaxed, clean, & professional</span>
-              <p class="cs-text">
-                1205 Maple Ave, Lisle, IL, United States, Illinois
+              <span class="cs-topper">Stay True Tattoo<BR> St. Augustine Florida</span>
 
-             
+           
+
+              
+              <p class="cs-text">
+                199 West King Street<BR>St. Augustine, Florida 32084
+                           
                   
               </p>
              
-            
-              <a href="/artists/" class="cs-button-solid">Meet our Artists</a>
+            <DIV class="buttonsContainer">
+              <a href="tel:{{client.phoneForTel}}" class="cs-button-solid">Call: {{client.phoneFormatted}}</a>
 
-              <a style="margin-top: 50px;" href="tel:{{client.phoneForTel}}"" class="cs-button-solid">Call: {{client.phoneFormatted}}</a>
+              
+
+            </DIV>
+              <img style="max-width: 100%; border-radius: 99px;" src="/assets/images/shop.jpg">
+              <a style="margin-top: 50px;" href="/" class="cs-button-solid">Meet Our Artists</a>
+
               
       </div>
   </div>

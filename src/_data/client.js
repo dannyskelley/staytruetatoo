@@ -1,8 +1,8 @@
 module.exports = {
-    "name": "Tomato Tattoo",
+    "name": "Stay True Tattoo - St. Augustine Florida",
     "email": "info@tomatotattoo.com",
-    "phoneForTel": "(630) 241-0669",
-    "phoneFormatted": "(630) 241-0669",
+    "phoneForTel": "904-217-4413",
+    "phoneFormatted": "904.217.4413",
     "address": {
         "lineOne": "1205 Maple Ave",
         "lineTwo": "",
