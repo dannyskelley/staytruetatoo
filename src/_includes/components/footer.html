@@ -41,7 +41,7 @@
                 text-align: center;
             }
         }
-
+.cs-button-solid:hover{color: black; text-decoration: none!important;}
         .right-section {
             margin: auto;
             max-width: calc(407 / 16 * 1rem);
@@ -118,12 +118,6 @@
                 justify-content: center;
             }
 
-            .cs-button-solid {
-                margin: 0;
-                height: calc(53 / 16 * 1rem);
-                width: calc(250 / 16 * 1rem);
-                padding-top: calc(3 / 16 * 1rem);
-            }
         }
 
         .credit {
@@ -178,7 +172,7 @@
 
             .logo {
                 margin-left: 0;
-                margin-top: -200px;
+                margin-top: -150px;
                 height: calc(40 / 16 * 2.5rem);
                 text-align: left;
                 max-width: 300px;
@@ -276,7 +270,7 @@
     .gandalfpill {transition: all ease .2s;margin-left:5px;vertical-align:middle;  display: inline-block; background-color: white; padding:0 8px; border-radius: 999px;}
 .gandalfpill:hover img {filter: grayscale(1) brightness(1000%);transition: all ease .8s;}
 .gandalfpill:hover {border:1px  solid white; background-color: black;  transform: translateY(-5px); transition: all ease .2s;}
-.back2top {font-size:2px}
+.back2top {font-size:2px; margin-top: 0px;}
 </STYLE>
 
 <footer id="footer">
@@ -386,17 +380,16 @@
       
       
         <div class="container">
-        
-            <span class="copyright">
-                © {% year %} {{client.name}}</span>
-                <a class="cs-button-solid back2top" href="#top">Back to top</a>
+            <a style="margin-bottom: 60px;" class="cs-button-solid back2top" href="#top">Back to top</a>
+            <div class="gandalfTag" >
+                <span>Designed & Hand Coded by</span>
+               
+                <a target="_blank" class="gandalfpill" href="https://designgandalf.com/"><img style="vertical-align:middle; " loading="lazy" decoding="async" src="/assets/svgs/logo.svg" alt="logo" height="12"></a>
+            </div>
+               
         </div>
       
-<div style="text-align: left; margin-left:20px;">
-        <span>Designed & Hand Coded by</span>
-       
-        <a target="_blank" class="gandalfpill" href="https://designgandalf.com/"><img style="vertical-align:middle; " loading="lazy" decoding="async" src="/assets/svgs/logo.svg" alt="logo" height="12"></a>
-    </div>
+
            
     </div>
 
