@@ -1,210 +1,311 @@
 <!-- ============================================ -->
-<!--                   Reviews                    -->
+<!--                    FAQ                       -->
 <!-- ============================================ -->
 
-<STYLE>
+<style>
   /*-- -------------------------- -->
-<---          Reviews           -->
+<---            FAQ             -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #reviews-1672 {
-    padding: var(--sectionPadding);
-  }
-  #reviews-1672 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 40px - 64px */
-    gap: clamp(2.5rem, 4.5vw, 4rem);
-  }
-  #reviews-1672 .cs-content {
-    text-align: left;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #reviews-1672 .cs-title {
-    margin: 0rem;
-  }
-  #reviews-1672 .cs-card-group {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    /* 16px - 20px */
-    gap: clamp(1rem, 2.5vw, 1.25rem);
-  }
-  #reviews-1672 .cs-item {
-    list-style: none;
-    width: 100%;
-    /* 20px - 40px top & bottom */
-    /* 20px - 40px left & right */
-    padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
-    background-color: #f7f7f7;
-    /* prevents padding from adding to height and width */
-    box-sizing: border-box;
-    
-    grid-column: span 12;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    position: relative;
-    /* 24px - 48px */
-    gap: clamp(1.5rem, 4vw, 3rem);
-  }
-  #reviews-1672 .cs-flex-group {
-    /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
-    margin-top: auto;
-    margin-bottom:30px;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-  #reviews-1672 .cs-profile {
-    width: 3.25rem;
-    height: auto;
-    border-radius: 50%;
-    position: relative;
-    display: block;
-  }
-  #reviews-1672 .cs-profile img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /* makes the image behave like a background image */
-    object-fit: cover;
-  }
-  #reviews-1672 .cs-name {
-    /* 20px - 25px */
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 0;
-    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
-    margin-top: auto;
-    color: var(--headerColor);
-    display: block;
-  }
-  #reviews-1672 .cs-job {
-    /* 14px - 16px */
-    font-size: 1rem;
-    line-height: 1.5em;
-    font-weight: 400;
-    margin: 0;
-    color: var(--bodyTextColor);
-    display: block;
-  }
-  #reviews-1672 .wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom:90px;
-  }
-  #reviews-1672 .cs-item-stars {
-    width: 6.75rem;
-    height: auto;
-  }
-  #reviews-1672 .cs-review {
-    /* 14px - 16px */
-    font-size: clamp(1.075rem, 1.6vw, 1rem);
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--bodyTextColor);
-    z-index: 1;
-  }
-  #reviews-1672 .cs-quote {
-    width: 5.375rem;
-    height: auto;
-    position: absolute;
-    right: 0rem;
-    bottom: 0rem;
-    z-index: 0;
-  }
+    #faq-1108 {
+        padding: var(--sectionPadding);
+        position: relative;
+    }
+    #faq-1108 .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 36.5rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 32px - 48px */
+        gap: clamp(2rem, 6vw, 3rem);
+    }
+    #faq-1108 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #faq-1108 .cs-title {
+        /* 32px - 48px */
+        margin: 0 0 clamp(2rem, 5vw, 3rem);
+    }
+    #faq-1108 .cs-picture {
+        width: 100%;
+        /* 360px - 400px */
+        height: clamp(22.5rem, 54vw, 45rem);
+        display: block;
+        position: relative;
+    }
+    #faq-1108 .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #faq-1108 .cs-faq-group {
+        width: 100%;
+        max-width: 40.625rem;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    #faq-1108 .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        background-color: #f7f7f7;
+        /* clips all corners of the button that overlap the rounded border */
+        overflow: hidden;
+        transition: border-bottom 0.3s;
+    }
+    #faq-1108 .cs-faq-item.active .cs-button {
+        color:#FE0000;
+    }
+    #faq-1108 .cs-faq-item.active .cs-button:before {
+        background-color: var(--primary);
+        transform: rotate(315deg);
+    }
+    #faq-1108 .cs-faq-item.active .cs-button:after {
+        background-color: var(--primary);
+        transform: rotate(-315deg);
+    }
+    #faq-1108 .cs-faq-item.active .cs-item-p {
+        height: auto;
+        /* 20px - 24px bottom */
+        /* 16px - 24px left & right */
+        padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 1.3vw, 1.5rem);
+        opacity: 1;
+    }
+    #faq-1108 .cs-button {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        line-height: 1.2em;
+        text-align: left;
+        font-weight: bold;
+        font-family:"Poppins", Arial, sans-serif;
+        /* 20px - 24px */
+        padding: clamp(1.25rem, 2vw, 1.5rem);
+        background-color: #f7f7f7;
+        border: none;
+        color: var(--headerColor);
+        display: block;
+        width: 100%;
+        position: relative;
+        transition:
+            background-color 0.3s,
+            color 0.3s;
+    }
+    #faq-1108 .cs-button:hover {
+        cursor: pointer;
+    }
+    #faq-1108 .cs-button:before {
+        /* left line */
+        content: "";
+        width: 0.5rem;
+        height: 0.125rem;
+        background-color: var(--headerColor);
+        opacity: 1;
+        border-radius: 50%;
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 1.5rem;
+        transform: rotate(45deg);
+        /* animate the transform from the left side of the x axis, and the center of the y */
+        transform-origin: left center;
+        transition: transform 0.5s;
+    }
+    #faq-1108 .cs-button:after {
+        /* right line */
+        content: "";
+        width: 0.5rem;
+        height: 0.125rem;
+        background-color: var(--headerColor);
+        opacity: 1;
+        border-radius: 50%;
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 1.3125rem;
+        transform: rotate(-45deg);
+        /* animate the transform from the right side of the x axis, and the center of the y */
+        transform-origin: right center;
+        transition: transform 0.5s;
+    }
+    #faq-1108 .cs-button-text {
+        width: 80%;
+        display: block;
+    }
+    #faq-1108 .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 90%;
+        height: 0;
+        margin: 0;
+        /* 16px - 24px */
+        padding: 0 clamp(1rem, 2vw, 1.5rem);
+        opacity: 0;
+        color: var(--bodyTextColor);
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        transition:
+            opacity 0.3s,
+            padding-bottom 0.3s;
+    }
 }
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #reviews-1672 .cs-item {
-    grid-column: span 4;
-  }
-}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #faq-1108 .cs-container {
+      margin-top: 100px;
+        max-width: 80rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    #faq-1108 .cs-content {
+        width: 40%;
+        text-align: left;
+        align-items: flex-start;
+        /* prevents flexbox from squishing it */
+        flex: none;
+    }
+    #faq-1108 .cs-faq-group {
+      margin-top: 50px;}
+  
+
                                 
-</STYLE>
-<div id="testimonials"></div>
-<section id="reviews-1672">
+</style>
+
+<section id="faq-1108">
   <div class="cs-container">
       <div class="cs-content">
-          <span class="cs-topper">Hear from</span>
-          <h2 class="cs-title">Our Happy Customers</h2>
+          <span class="cs-topper" style="color:#F60207">FAQ’s</span>
+          <h2 class="cs-title" style="color: black;">Frequently Asked Questions</h2>
+          <picture class="cs-picture">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="/assets/images/shop2.jpg">
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="/assets/images/shop2.jpg">
+              <img loading="lazy" decoding="async" src="/assets/images/shop2.jpg" alt="appliance" width="522" height="400">
+          </picture>
       </div>
-      <ul class="cs-card-group">
-          <li class="cs-item">
-              <div class="cs-flex-group">
-                  <picture class="cs-picture">
-                      <img class="cs-profile" src="/assets/images/paul.webp" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
-                  </picture>
-                  <span class="cs-name">
-                      Paul Blossom
-                      <span class="cs-job">Blossomtile.com</span>
-                  </span>
-              </div>
-              <div class="wrapper">
-                  <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
-                  <p class="cs-review">
-                    Listen folks I think it’s a shame that I can only give Danny five stars. I would give him 25 stars if I could just a talented guy such a great demeanor we just love his graphic design knowledge and the way he did. Our website is just outstanding. I highly recommend Danny Skelley for all your digital website needs.                  </p>
-              </div>
-              <!--Quote Icon-->
-              <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
-          </li>
-          <li class="cs-item" data-aos="fade-up">
-              <div class="cs-flex-group">
-                  <picture class="cs-picture">
-                      <img class="cs-profile" src="/assets/images/joe.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
-                  </picture>
-                  <span class="cs-name">
-                      Joe DiPasquale 
-                      <span class="cs-job">Regroup.com</span>
-                  </span>
-              </div>
-              <div class="wrapper">
-                  <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
-                  <p class="cs-review">
-                    Gandalf gave our site exactly the look and feel we wanted. 10 out of 10. Extremely easy to work with, receptive to feedback, and able to design in any style or format as well as come up with his own design suggestions and work independently. We were fortunate to have Gandalf work with us and I wouldn't hesitate to work with them again. 
-                  </p>
-              </div>
-              <!--Quote Icon-->
-              <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
-          </li>
-          <li class="cs-item" data-aos="fade-up">
-              <div class="cs-flex-group">
-                  <picture class="cs-picture">
-                      <img class="cs-profile" src="/assets/images/brian.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
-                  </picture>
-                  <span class="cs-name">
-                    Brian Portillo 
-                      <span class="cs-job">Senior Sofrware Engineer</span>
-                  </span>
-              </div>
-              <div class="wrapper" data-aos="fade-up">
-                  <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-stars.svg" alt="stars" width="96" height="16">
-                  <p class="cs-review">
-                    Gandalf is the best design company that I have had the pleasure of working with. They incorporate latest industry trends without losing the the focus of the business. A very keen eye for amazing design and are constantly trying to innovate to set their designs above the status quo
-                  </p>
-              </div>
-              <!--Quote Icon-->
-              <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gray-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
-          </li>
-      </ul>
+      <div class="cs-flex-group">
+          <ul class="cs-faq-group">
+              <!-- Active class added as default -->
+              <li class="cs-faq-item active">
+                  <button class="cs-button">
+                      <span class="cs-button-text">
+                        What are your shop hours?
 
-      <a target="_blank" href="https://maps.app.goo.gl/zhoTGX9HB8wnhJtH6" class="cs-button-solid">See our Google Reviews</a>
+                      </span>
+                  </button>
+                  <p class="cs-item-p">
+                    We are open 12pm-8pm daily with a rotating roster of artists. Want to work with someone specific? Make sure to contact that artist directly to make sure it is within their working days. 
+
+                  </p>
+              </li>
+              <li class="cs-faq-item">
+                  <button class="cs-button">
+                      <span class="cs-button-text">
+                        Do you take walk-ins?
+
+                      </span>
+                  </button>
+                  <p class="cs-item-p">
+                    Enthusiastically, YES! We love walk-in business! Bring us your ideas or come check out our huge selection of flash available at all times!
+                  </p>
+              </li>
+              <li class="cs-faq-item">
+                  <button class="cs-button">
+                      <span class="cs-button-text">
+                          How do I make an appointment?
+
+                      </span>
+                  </button>
+                  <p class="cs-item-p">
+                    Do you have a specific artist you are wanting to work with? Contact them directly via phone or Instagram! Don’t have an artist in mind? Call the shop for availability on any date you are trying to come in. Deposits are required to secure your appointment and can be taken in person at the shop, or digitally depending on the artist you’re going to be working with. Any further questions about appointment making can be answered by calling the shop at (904)217-4413.
+ 
+                  </p>
+              </li>
+              <li class="cs-faq-item">
+                  <button class="cs-button">
+                      <span class="cs-button-text">
+                        Do you have a shop minimum?
+                      </span>
+                  </button>
+                  <p class="cs-item-p">
+                    Yes our shop minimum is $100. Tattoos start at our minimum and go up from there depending on design, size, and body location. 
+
+                  </p>
+              </li>
+              <li class="cs-faq-item">
+                  <button class="cs-button">
+                      <span class="cs-button-text">
+                        Do you tattoo minors?
+                      </span>
+                  </button>
+                  <p class="cs-item-p">
+                    Yes. The legal age to tattoo without parental consent is 18, HOWEVER, the minimum age with proper parental consent and documentation is 16 years old. There are required steps in order for us to be legally able to tattoo anyone under 18. <a style="font-weight: bold;" target="_blank" href="https://www.floridahealth.gov/environmental-health/tattooing/_documents/Notarized_Minor_Consent.pdf">You MUST print this form</a> and have it filled AND notorized, as well as some form of identification for both the consenting parent AND the minor. This includes state issued ID, military ID, and passport. Finally, the minor MUST be accompanied by the consenting parent listed on the notorized form and the parent must remain present throughout the duration of the tattoo process. 
+
+                  </p>
+              </li>
+
+              <li class="cs-faq-item">
+                  <button class="cs-button">
+                      <span class="cs-button-text">
+                        What makes Stay True different from other shops?
+
+                      </span>
+                  </button>
+                  <p class="cs-item-p">                    Sure we do tattoos. Sure we advise clients on best choices. Sure we work with folks on custom ideas, tailor made to give you the tattoo of your dreams! And sure we have FUN! Did you know that we have a wide array of tattoo carnival games?
+                    <BR><BR><B>WE’VE GOT!</B><BR>
+                    
+
+    • Plinko!
+    <BR>
+    • Tattoo Roulette!
+
+    <BR>
+    • Darts!
+    <BR>
+    • 4 Gumball Machines!
+
+    <BR>
+    • and more!!!   
+
+
+
+
+  <BR><BR>
+Each game designed to get you a killer piece of flash for a fraction of the price! Looking for a deal in your next tattoo? Look no further than our tattoo arcade, located at the one and only Stay True Tattoo in St. Augustine, Florida!
+
+                  </p>
+              </li>
+          </ul>
+      </div>
   </div>
 </section>
-                              
+
+
+<script>
+  const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+for (const item of faqItems) {
+const onClick = () => {
+item.classList.toggle('active')
+}
+item.addEventListener('click', onClick)
+}
+  
+</script>
